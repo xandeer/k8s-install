@@ -1,0 +1,5 @@
+etcd
+kube-apiserver
+kube-controller-manager
+kubectl
+kube-scheduler

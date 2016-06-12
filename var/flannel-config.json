@@ -1,0 +1,10 @@
+{
+    "Network": "192.254.0.0/16",
+    "SubnetLen": 24,
+    "SubnetMin": "192.254.50.0",
+    "SubnetMax": "192.254.199.0",
+    "Backend": {
+        "Type": "vxlan",
+        "VNI": 1
+    }
+}

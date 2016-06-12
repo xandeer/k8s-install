@@ -1,0 +1,17 @@
+[Unit]
+Description=Etcd Server
+After=network.target
+
+[Service]
+WorkingDirectory=/var/lib/etcd/
+EnvironmentFile=-/etc/etcd/etcd.conf
+User=etcd
+ExecStart=/usr/bin/etcd \
+        $ETCD_NAME \
+        $ETCD_DATA_DIR \
+        $ETCD_LISTEN_CLIENT_URLS \
+        $ETCD_ADVERTISE_CLIENT_URLS
+Type=notify
+
+[Install]
+WantedBy=multi-user.target
